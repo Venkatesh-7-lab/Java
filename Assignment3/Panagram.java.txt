@@ -1,0 +1,35 @@
+class PanagramProgram
+{
+    public static boolean isPanagram(String s) 
+    {
+        if(s.length()<26) 
+        {
+            return false;
+        }
+        else 
+        {
+            for(char ch='a';ch<='z';ch++) 
+            {
+                if(s.indexOf(ch)==-1) 
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    public static void main(String[] args) 
+    {
+        java.util.Scanner sc=new java.util.Scanner(System.in);
+        String s=sc.nextLine(); 
+        boolean result=isPanagram(s.toLowerCase());
+        if(result)
+        {
+            System.out.println("it is panagram");
+        }
+        else 
+        {
+            System.out.println("it is not a panagram");
+        }
+    }
+}
